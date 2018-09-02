@@ -8,14 +8,13 @@ const aboutView = require('./about')
 const scheduleView = require('./schedule')
 const newsView = require('./news')
 const accessView = require('./access')
-const calendarView = require('./calendar')
 const footerView = require('./footer')
 
 const scope = css('./index.css')
 
 const TITLE = config.TITLE_PREFIX
 
-module.exports = function mainView(state, emit) {
+module.exports = function mainView (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
 
   return scope(html`

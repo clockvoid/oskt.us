@@ -3,7 +3,7 @@ const css = require('scopedify')
 
 const scope = css('./menu')
 
-module.exports = function menu(state, emit) {
+module.exports = function menu (state, emit) {
   return scope(html`
     <ul class="root">
       <li class="item"><a href="#page/main/about">About</a></li>
