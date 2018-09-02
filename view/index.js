@@ -15,7 +15,7 @@ const scope = css('./index.css')
 
 const TITLE = config.TITLE_PREFIX
 
-module.exports = function mainView (state, emit) {
+module.exports = function mainView(state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
 
   return scope(html`
@@ -25,7 +25,6 @@ module.exports = function mainView (state, emit) {
       ${scheduleView(...arguments)}
       ${newsView(...arguments)}
       ${accessView(...arguments)}
-      ${calendarView(...arguments)}
       ${footerView(...arguments)}
     </body>
   `)
